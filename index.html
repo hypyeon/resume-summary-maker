@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="script.js"></script>
+        <title>Resume Summary Maker</title>
+    </head>
+<body class="flex col j-c-c">
+    <div class="flex col j-c-sa" id="input">
+        <div class="title">
+            <h1>Resume Summary Maker</h1>
+            <p><em>< coded by <a href="https://www.hayeong.website" target="_blank">Hayeong</a></em> ></p>   
+        </div>
+    
+        <div class="main flex col">
+            <h3>
+                Generate a summary for your resume in <span class="underline">30 seconds</span>!&#127881; <br>
+                <span class="smaller-font">To all the job seekers out there, best of luck! &#128588;</span> 
+            </h3> 
+            <form class="flex col">
+                <div class="flex row j-c-c" id="name-field">
+                    <div>
+                        <label for="name"><span class="bold">&#9997; Full name</span>:</label>
+                        <input class="input" type="text" id="name" required>        
+                    </div>
+                    <div>
+                        <label for="pronoun"><span class="bold">&#128100; Pronoun</span> (they/he/she):</label>
+                        <input class="input" type="text" id="pronoun" required>   
+                    </div>
+                </div>    
+                <div>
+                    <label for="strengths"><span class="bold">&#128170; Select your strengths</span> (Choose 3):</label> <br>
+                    <div class="flex j-c-c" id="strengths" multiple size="3" required>
+                        <label><input type="checkbox" name="selectedStrengths" value="adaptable"> Adaptable</label>
+                        <label><input type="checkbox" name="selectedStrengths" value="creative"> Creative</label>
+                        <label><input type="checkbox" name="selectedStrengths" value="detail-oriented"> Detail-Oriented</label>
+                        <label><input type="checkbox" name="selectedStrengths" value="innovative"> Innovative</label>
+                        <label><input type="checkbox" name="selectedStrengths" value="leadership">  Leadership</label>
+                        <label><input type="checkbox" name="selectedStrengths" value="problem solver"> Problem Solver</label>
+                        <label><input type="checkbox" name="selectedStrengths" value="team player"> Team Player</label>
+                        <label><input type="checkbox" name="selectedStrengths" value="organized"> Organized</label>
+                        <label><input type="checkbox" name="selectedStrengths" value="commercially-aware"> Commercially-aware</label>
+                        <label><input type="checkbox" name="selectedStrengths" value="resourceful"> Resourceful</label>
+                    </div>   
+                </div>
+                
+                <div>
+                    <label for="keywords"><span class="bold">&#128199; Past experience keywords</span> (i.e. Customer Service):</label> 
+                    <input class="input" type="text" id="keyword-1" required> 
+                    <input class="input" type="text" id="keyword-2" required>  
+                </div>
+    
+                <div class="flex row j-c-c">
+                    <button type="button" id="generate">Generate Summary</button>
+                    <button type="reset" id="reset">Reset Form</button>    
+                </div>
+            </form>
+        
+        </div>
+    
+    </div>
+    <div class="flex col j-c-st" id="result">
+        <h3>Your Resume Summary &#11015;</h3>
+        <p id="result-p">
+            <span class="hidden" id="summaryResult"></span>
+        </p>
+        <p class="hidden" id="again">
+            Don't like the result? Hit 'Generate Summary' again.
+        </p>    
+    </div>
+</body>
+</html>
