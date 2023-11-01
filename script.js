@@ -52,7 +52,7 @@ function generateSummary() {
 
     const summary4 = `${name} is a dynamic and innovative professional, known for ${pronounPoss} exceptional ${strengths[0]} and ${strengths[1]} abilities. With expertise in ${keyOne} and a keen eye for ${keyTwo}, ${pronoun} consistently deliver(s) creative solutions and drives success for ${pronounPoss} team and organization.`;
 
-    const summary5 = `As a skilled and adaptable ${strengths[0]} expert, ${name} brings ${pronounPoss} passion for ${keyOne} and expertise in ${keyTwo} to every project. Known for ${pronounPoss} ability to ${strengths[1]} and ${strengths[2]}, ${pronoun} is/are a valuable asset who ensures the achievement of remarkable results and fosters a collaborative working environment.`;
+    const summary5 = `As a skilled and adaptable ${strengths[0]} expert, ${name} brings ${pronounPoss} passion for ${keyOne} and expertise in ${keyTwo} to every project. Known for ${pronounPoss} ${strengths[1]} and ${strengths[2]} abilities, ${pronoun} is/are a valuable asset who ensures the achievement of remarkable results and fosters a collaborative working environment.`;
 
     // Choose a random summary to display
     const summaries = [summary1, summary2, summary3, summary4, summary5];
