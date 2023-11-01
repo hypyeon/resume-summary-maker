@@ -8,10 +8,14 @@
 html {
   background-color: rgba(0, 158, 158, 0.5);
   font-family: "Lato", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .hidden {
+  display: none;
+}
+
+.only-mobile {
   display: none;
 }
 
@@ -52,7 +56,7 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   margin: calc(10vh - 2rem) auto;
-  padding: 2rem 4rem;
+  padding: 2rem 3rem;
   background-color: aliceblue;
   border-radius: 50px;
 }
@@ -67,7 +71,7 @@ body {
   margin: 0 auto;
 }
 .title h1 {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   letter-spacing: 1px;
 }
 .title p {
@@ -86,27 +90,27 @@ body {
   transition-duration: 0.5s;
 }
 
-.main {
-  gap: 2rem;
-  padding-bottom: 1.5rem;
-}
-.main h3 {
+.intro h3 {
   text-align: center;
   color: rgba(0, 158, 158, 0.75);
   font-size: 1.25rem;
 }
-.main h3 .underline {
+.intro h3 .underline {
   text-decoration: underline;
 }
-.main h3 .smaller-font {
+.intro h3 .smaller-font {
   font-size: 1rem;
+}
+
+.main {
+  padding-bottom: 1.5rem;
 }
 .main form {
   gap: 1.5rem;
   text-align: center;
 }
 .main form label {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .main form label .bold {
   font-size: 1.15rem;
@@ -132,7 +136,7 @@ body {
 }
 .main form #strengths label {
   padding: 0 0.5rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
   letter-spacing: 0.25px;
 }
 .main form button {
@@ -144,7 +148,7 @@ body {
   border: none;
   color: white;
   letter-spacing: 0.5px;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   cursor: pointer;
@@ -156,12 +160,14 @@ body {
 #result h3 {
   height: 3vh;
   margin-bottom: 1vh;
+  font-size: 1.25rem;
 }
 #result #result-p {
   height: 14vh;
   border: 1px solid rgba(0, 158, 158, 0.5);
   padding: 0.5rem;
   text-align: center;
+  font-size: 1rem;
 }
 #result #result-p span {
   height: -moz-fit-content;
@@ -171,6 +177,72 @@ body {
 #result #again {
   text-align: center;
   color: gray;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.25px;
   margin-top: 1vh;
+}
+
+@media only screen and (orientation: portrait) {
+  body {
+    width: 90vw;
+    padding: 2rem 1.5rem;
+  }
+  .only-mobile {
+    display: block;
+  }
+  #input {
+    height: -moz-fit-content;
+    height: fit-content;
+    gap: 2rem;
+  }
+  .title h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .intro h3 {
+    font-size: 1.15rem;
+  }
+  .intro h3 .smaller-font {
+    font-size: 0.9rem;
+  }
+  .main {
+    padding-bottom: 2.25rem;
+  }
+  .main form label {
+    font-size: 0.85rem;
+  }
+  .main form label .bold {
+    font-size: 1.05rem;
+  }
+  .main form #name-field {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .main form #name-field #pronoun {
+    width: 76px;
+  }
+  .main form .only-mobile {
+    display: block;
+  }
+  .main form #keyword-1, .main form #keyword-2 {
+    margin-top: 0.5rem;
+    width: 120px;
+  }
+  .main form #keyword-1 {
+    margin-right: 0.25rem;
+    margin-left: 0;
+  }
+  .main form button {
+    width: 45%;
+  }
+  #result {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #result #result-p {
+    height: 28vh;
+  }
+  #result #again {
+    font-size: 0.85rem;
+  }
 }/*# sourceMappingURL=style.css.map */
