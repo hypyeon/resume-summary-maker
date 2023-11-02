@@ -3,12 +3,12 @@ function generateSummary() {
     if (name.trim() === "") {
         alert("Please write your name.");
         return;
-    }
-    const pronoun = document.getElementById("pronoun").value;
+    };
+    const pronoun = document.getElementById("pronoun").value.toLowerCase();
     if (pronoun.trim() === "") {
         alert("Please write your pronoun.");
         return;
-    }
+    };
     let pronounSub;
     if (pronoun === 'they') {
         pronounSub = 'them';
@@ -31,6 +31,15 @@ function generateSummary() {
         alert("Please write your pronoun as 'they', 'he', or 'she'.");
         return;
     };
+    let beVerb;
+    if (pronoun === 'they') {
+        beVerb = 'are';
+    } else if (pronoun === 'he' || pronoun === 'she') {
+        beVerb = 'is';
+    } else {
+        alert("Please write your pronoun as 'they', 'he', or 'she'.");
+        return; 
+    };
     const strengths = Array.from(document.getElementsByName("selectedStrengths")).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
     if (strengths.length !== 3) {
         alert("Please select 3 strengths.");
@@ -48,11 +57,11 @@ function generateSummary() {
 
     const summary2 = `A/an ${strengths[0]}, ${strengths[1]} professional, ${name} possesses a unique blend of skills that include ${keyOne} and an exceptional understanding of ${keyTwo}. With a commitment to excellence and an innate ${strengths[2]} skills, ${pronoun} consistently deliver(s) outstanding results, making ${pronounSub} an ideal choice for challenging projects.`;
 
-    const summary3 = `Meet ${name}, a/an ${strengths[0]} professional renowned for ${pronounPoss} expertise in ${keyOne} and ${pronounPoss} ability to bring successful results in ${keyTwo}. Known for ${pronounPoss} strong ${strengths[1]} and ${strengths[2]} skills, ${pronoun} is/are a valuable asset for any organization looking to achieve exceptional outcomes.`;
+    const summary3 = `Meet ${name}, a/an ${strengths[0]} professional renowned for ${pronounPoss} expertise in ${keyOne} and ${pronounPoss} ability to bring successful results in ${keyTwo}. Known for ${pronounPoss} strong ${strengths[1]} and ${strengths[2]} skills, ${pronoun} ${beVerb} a valuable asset for any organization looking to achieve exceptional outcomes.`;
 
     const summary4 = `${name} is a dynamic and innovative professional, known for ${pronounPoss} exceptional ${strengths[0]} and ${strengths[1]} abilities. With expertise in ${keyOne} and a keen eye for ${keyTwo}, ${pronoun} consistently deliver(s) creative solutions and drives success for ${pronounPoss} team and organization.`;
 
-    const summary5 = `As a skilled and adaptable ${strengths[0]} expert, ${name} brings ${pronounPoss} passion for ${keyOne} and expertise in ${keyTwo} to every project. Known for ${pronounPoss} ${strengths[1]} and ${strengths[2]} abilities, ${pronoun} is/are a valuable asset who ensures the achievement of remarkable results and fosters a collaborative working environment.`;
+    const summary5 = `As a skilled and adaptable ${strengths[0]} expert, ${name} brings ${pronounPoss} passion for ${keyOne} and expertise in ${keyTwo} to every project. Known for ${pronounPoss} ${strengths[1]} and ${strengths[2]} abilities, ${pronoun} ${beVerb} a valuable asset who ensures the achievement of remarkable results and fosters a collaborative working environment.`;
 
     // Choose a random summary to display
     const summaries = [summary1, summary2, summary3, summary4, summary5];
